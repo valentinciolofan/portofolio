@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import { Icon } from "astro-icon/components";
+const { id, gif, title, description } = Astro.props;
+const gifAlt = `${title} GIF`;
+const closeId = `${id}Close`;
+---
+<div id={id} class="fixed top-0 left-0 w-full h-full hidden bg-black bg-opacity-75 z-50 items-center justify-center">
+    <div class="relative m-3.5 p-6 sm:p-10 bg-black rounded border border-solid border-slate max-w-lg sm:max-w-xl md:max-w-2xl">
+    <span id={closeId} class="absolute top-3.5 right-3.5 cursor-pointer bg-onyx p-2 rounded-lg closeModal">
+        <Icon name=close class="h-4 text-white" />
+    </span>
+    {gif && (
+      <Image
+        src={gif}
+        alt={gifAlt}
+        class="w-full max-w-sm sm:max-w-full h-52 xs:h-auto mb-4 rounded-xl object-cover sm:mt-3"
+      />
+    )}
+    <h3 class="ms-2 mb-1 text-xl font-bold text-white">{title}</h3>
+    <p class="ms-2 text-md text-light-gray-90 leading-relaxed font-light text-base">{description}</p>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', initializeModals);
+    function initializeModals() {
+        // Get the buttons and create a mapping of button index to modal
+        const openModalBtns = document.querySelectorAll('.openModal');
+        const closeModalBtns = document.querySelectorAll('.closeModal');
+        const modals = Array.from({ length: openModalBtns.length }, (_, index) => document.getElementById(`modal${index}`));
+        // Function to open the modal
+        console.log(modals);
+        function openModal(index: number) {
+            const modal = modals[index];
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        }
+
+        // Function to close the modal
+        function closeModal(index: number) {
+            const modal = modals[index];
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        }          
+
+        // Event listeners for each 'open' button
+        openModalBtns.forEach((btn, index) => {
+            btn.addEventListener("click", () => openModal(index));
+        });
+
+        // Event listeners for each 'close' button
+        closeModalBtns.forEach((btn, index) => {
+            btn.addEventListener('click', () => closeModal(index));
+        });
+
+        // Close the modal if the user clicks outside the modal content
+        window.addEventListener('click', function (event) {
+            modals.forEach((modal, index) => {
+                if (event.target === modal) {
+                    closeModal(index);
+                }
+            });
+        });
+
+        // Close the modal if the user presses the 'Escape' key
+        window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                modals.forEach((modal, index) => {
+                    closeModal(index);
+                });
+            }
+        });
+    };
+</script>
