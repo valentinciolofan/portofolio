@@ -58,7 +58,7 @@ console.log(projects);
                       id="contactForm"
                       method="POST"
                       class="*:border-zinc-800"
-                      data-netlify="true"
+                      netlify
                     >
                       <input
                         type="text"
@@ -718,6 +718,7 @@ console.log(projects);
         console.warn("Required elements for modal functionality not found.");
       }
     });
+
     // handle contact form submit data
     const submitFormData = (e) => {
       e.preventDefault();
