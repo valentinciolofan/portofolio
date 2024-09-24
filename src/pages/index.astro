@@ -58,8 +58,8 @@ console.log(projects);
                       id="contactForm"
                       method="POST"
                       class="*:border-zinc-800"
-                      netlify
-                    >
+                      data-netlify="true"
+                      >
                       <input
                         type="text"
                         name="name"
@@ -720,14 +720,14 @@ console.log(projects);
     });
 
     // handle contact form submit data
-    const submitFormData = (e) => {
-      e.preventDefault();
+    // const submitFormData = (e) => {
+    //   e.preventDefault();
 
-      const formData = new FormData(e.target);
+    //   const formData = new FormData(e.target);
 
-      console.log(Object.fromEntries(formData));
-    };
-    document.querySelector('#contactForm').addEventListener('submit', submitFormData);
+    //   console.log(Object.fromEntries(formData));
+    // };
+    // document.querySelector('#contactForm').addEventListener('submit', submitFormData);
 
     // script for about me section
     const btnAbout = document.getElementById("btnAbout");
