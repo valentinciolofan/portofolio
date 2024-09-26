@@ -1,28 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Icon } from 'astro-icon/components';
-import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
-import ProjectInformation from '../components/ProjectInformation.astro';
-const projects = await getCollection('projects');
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import ProjectInformation from "../components/ProjectInformation.astro";
+import Contact from "../components/Contact.astro";
+const projects = await getCollection("projects");
 console.log(projects);
 ---
 
 <Layout title="Valentin Ciolofan Web Developer">
-  <main class="">
+  <main class="mt-12">
     <!-- landing section with navbar and offer plus CTA button-->
-    <!-- Modal -->
     <section
-      class="flex flex-col justify-center items-center h-screen"
+      class="flex flex-col justify-center items-center h-screen overflow-hidden"
       id="landingPage"
     >
       <!-- offer container -->
-      <div class="offer-container max-w-full">
+      <div class="offer-container container">
         <span class="blur"></span>
-        <div class="offer md:flex md:justify-center md:gap-16">
+        <div class="px-5 md:px-0 offer md:flex md:justify-between md:gap-16">
           <!--offer and CTA -->
           <div
-            class="left-side flex flex-col justify-center items-center text-center md:items-start md:text-left"
+            class="left-side animate-slideInFromLeft flex flex-col justify-center items-center text-center md:items-start md:text-left"
           >
             <span class="blur2"></span>
             <h1 class="mb-4 text-5xl">Hi, I'm Valentin</h1>
@@ -33,63 +33,7 @@ console.log(projects);
             <h3 class="mb-3 text-base">
               Tired of your old, slow, and outdated website?
             </h3>
-            <div
-              id="contactModal"
-              class="hidden fixed flex justify-center items-center z-50 inset-0 bg-zinc-600 bg-opacity-50 overflow-y-auto h-full w-full transition-opacity duration-300 ease-in-out"
-            >
-              <!-- Modal content -->
-              <div
-                class="relative p-5 border border-zinc-800 max-w-2xl min-h-96 shadow-lg rounded-md bg-zinc-900"
-              >
-                <div class="mt-3 text-center">
-                  <!-- CLOSE FORM -->
-                  <div class="absolute top-0 right-0 p-2 text-2xl">
-                    <button
-                      id="closeContactModal"
-                      class="text-gray-600 hover:text-gray-400">&times;</button
-                    >
-                  </div>
-                  <!-- END OF CLOSE FORM -->
-                  <h3 class="text-lg leading-6 font-medium text-zinc-300">
-                    Contact
-                  </h3>
-                  <div class="mt-2 px-7 py-3">
-                    <form
-                      id="contactForm"
-                      method="POST"
-                      class="*:border-zinc-800"
-                      data-netlify="true"
-                      >
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        class="mb-3 px-3 py-2 border rounded w-full"
-                        required
-                      />
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        class="mb-3 px-3 py-2 border rounded w-full"
-                        required
-                      />
-                      <textarea
-                        name="message"
-                        rows="4"
-                        placeholder="Your Message"
-                        class="mb-3 px-3 py-2 border rounded w-full"
-                        required></textarea>
-                      <button
-                        type="submit"
-                        class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-zinc-700"
-                        >Send</button
-                      >
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
+         
             <button
               class="openContactModal btn-cta-homepage text-base bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white py-2 px-2 rounded-md transition duration-300 ease-in-out"
             >
@@ -99,7 +43,7 @@ console.log(projects);
           <!--end of offer and CTA -->
           <!--hero section photo -->
           <div
-            class="md:pt-4 lg:p-0 right-side photo md:flex md:justify-center md:w-2/5"
+            class="animate-slideInFromRight md:pt-4 lg:p-0 right-side photo md:flex md:justify-center md:w-2/5"
           >
             <img
               alt="landing page photo"
@@ -118,9 +62,15 @@ console.log(projects);
       class="about-me flex flex-col justify-center items-center py-28 gap-7 bg-about-me"
       id="aboutme"
     >
-      <div class="container sm:mx-20 md:mx-4 flex flex-col md:flex-row gap-7">
+      <div
+        class="container px-5 md:px-0 mx-20 md:mx-4 flex flex-col md:flex-row gap-7"
+      >
         <div
-          class="contact-me h-fit md:sticky top-44 flex flex-col sidebar rounded-2xl border border-solid border-zinc-700 p-6 shadow-2xl active bg-light-dark"
+          class="contact-me h-fit md:sticky top-44 basis-1/6 flex flex-col sidebar rounded-2xl border border-solid border-zinc-700 p-6 shadow-2xl active bg-light-dark"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          data-aos-once="true"
         >
           <div class="flex flex-row justify-center">
             <div class="flex gap-3 flex-col items-center">
@@ -208,7 +158,11 @@ console.log(projects);
         </div>
         <!--ABOUT ME DIV-->
         <div
-          class="about-me relative rounded-2xl border border-solid border-zinc-700 p-6 sm:p-8 bg-light-dark"
+          class="about-me relative rounded-2xl border basis-5/6 border-solid border-zinc-700 p-6 sm:p-8 bg-light-dark"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+          data-aos-once="true"
         >
           <!-- about me section menu -->
           <div
@@ -617,40 +571,61 @@ console.log(projects);
             </div>
           </div>
           <!-- portfolio section -->
-          <section id="portfolio" class="hidden">
-            <h1> Portfolio bro </h1>
-           
+          <section
+            id="portfolio"
+            class="hidden"
+            data-aos="fade"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-once="true"
+          >
+            <h1>Portfolio bro</h1>
+
             <div class="mt-3 sm:mt-5">
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 mb-3">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7 mb-3"
+              >
                 {
-                    projects.map((object, index) => (
+                  projects.map((object, index) => (
                     <figure>
-                        <div class="relative overflow-hidden rounded-xl mb-3.5 bg-black openModal group">
-                            <Image
-                                src={object.data.coverPhoto}
-                                alt={object.data.title}
-                                class="w-full h-52 xs:h-auto rounded-xl cursor-pointer hover:scale-110 hover:opacity-30 transition duration-300 object-cover"
-                            />
-                            <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+                      <div class="relative overflow-hidden rounded-xl mb-3.5 bg-black openModal group">
+                        <Image
+                          src={object.data.coverPhoto}
+                          alt={object.data.title}
+                          class="w-full h-52 xs:h-auto rounded-xl cursor-pointer hover:scale-110 hover:opacity-30 transition duration-300 object-cover"
+                        />
+                        <button
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
                                     bg-gray-200 p-4 rounded-xl opacity-0 group-hover:opacity-100
-                                    transition duration-300 pointer-events-none">
-                                <Icon name="eye" class="h-5 text-light-gray" />
-                            </button>
-                        </div>
-                        <ProjectInformation id={`modal${index}`} gif={object.data.gif} title={object.data.title} description={object.data.description} />
-                        <h3 class="ms-2 text-md text-white">{ object.data.title }</h3>
-                        <p class="ms-2 text-md text-light-gray">{ object.data.category }</p>
+                                    transition duration-300 pointer-events-none"
+                        >
+                          <Icon name="eye" class="h-5 text-light-gray" />
+                        </button>
+                      </div>
+                      <ProjectInformation
+                        id={`modal${index}`}
+                        gif={object.data.gif}
+                        title={object.data.title}
+                        description={object.data.description}
+                      />
+                      <h3 class="ms-2 text-md text-white">
+                        {object.data.title}
+                      </h3>
+                      <p class="ms-2 text-md text-light-gray">
+                        {object.data.category}
+                      </p>
                     </figure>
-                    ))
-    
+                  ))
                 }
-            </div>
+              </div>
             </div>
           </section>
         </div>
         <!--END OF ABOUT ME DIV -->
       </div>
     </section>
+    <!-- Modal contact -->
+    <Contact />
   </main>
   <!-- END OF ABOUT ME SECTION -->
 
@@ -732,24 +707,22 @@ console.log(projects);
     // script for about me section
     const btnAbout = document.getElementById("btnAbout");
     const btnPortfolio = document.getElementById("btnPortfolio");
-    const aboutMeInfo = document.getElementById('aboutMeInfo');
-    const portfolio = document.getElementById('portfolio');
+    const aboutMeInfo = document.getElementById("aboutMeInfo");
+    const portfolio = document.getElementById("portfolio");
 
-    btnAbout.addEventListener('click', () => {
-      console.log(aboutMeInfo);
-      if (aboutMeInfo !== 'block') {
-        aboutMeInfo.style.display = 'block';
-        portfolio.style.display = 'none';
+    btnAbout.addEventListener("click", () => {
+      if (aboutMeInfo.style.display !== "block") {
+        aboutMeInfo.style.display = "block";
+        aboutMeInfo.classList.add("animate-fade");
+        portfolio.style.display = "none";
       }
-    })
-    btnPortfolio.addEventListener('click', () => {
-      console.log(portfolio);
-
-      if (portfolio !== 'block') {
-        aboutMeInfo.style.display = 'none';
-        portfolio.style.display = 'block';
-
+    });
+    btnPortfolio.addEventListener("click", () => {
+      if (portfolio.style.display !== "block") {
+        aboutMeInfo.style.display = "none";
+        portfolio.style.display = "block";
+        portfolio.classList.add("animate-fade");
       }
-    })
+    });
   </script>
 </Layout>

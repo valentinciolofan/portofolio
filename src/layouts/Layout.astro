@@ -1,71 +1,86 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '@fortawesome/fontawesome-free/css/all.css';
-
-
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap">
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap"
+		/>
+		<!-- AOS CSS via CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen">
 		<!-- header homepage -->
 		<Header />
- 		<!-- end of header homepage -->
+		<!-- end of header homepage -->
 		<slot />
 		<Footer />
+
+		<!-- AOS JavaScript via CDN -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" client:load></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				AOS.init();
+			});
+		</script>
 	</body>
 </html>
+
 <style is:global>
+	:root {
+		background: linear-gradient(to right, #000000, #130f40);
+		background-repeat: no-repeat;
+		font-size: 16px;
+		line-height: 1.5;
 
-:root {
-	background: linear-gradient(to right, #000000, #130f40);
-	background-repeat: no-repeat;
-	font-size: 16px;
- 	line-height: 1.5;
+		--white-primary: #fff; /* Pure white */
+		--white-off1: #f8f8f8; /* Slightly off-white */
+		--white-off2: #e5e5e5; /* Light gray */
+	}
 
-  --white-primary: #fff; /* Pure white */
-  --white-off1: #f8f8f8; /* Slightly off-white */
-  --white-off2: #e5e5e5; /* Light gray */
-}
-
-
-h1 { 
-  font-size: calc(1.5rem * 1.25 * 1.25 * 1.25); 
-  color: var(--white-off1); 
-}
-h2 { 
-  font-size: calc(1.5rem * 1.25 * 1.25); 
-  color: var(--white-off2); 
-}
-h3 { 
-  font-size: calc(1.5rem * 1.25); 
-  color: var(--white-off2);
-}
-h4 { 
-  font-size: 1.5rem; 
-  color: var(--white-primary); 
-}
-p,
-span,
-a { 
-  font-size: 1rem; 
-  color: var(--white-primary); 
-}
-
+	h1 {
+		font-size: calc(1.5rem * 1.25 * 1.25 * 1.25);
+		color: var(--white-off1);
+	}
+	h2 {
+		font-size: calc(1.5rem * 1.25 * 1.25);
+		color: var(--white-off2);
+	}
+	h3 {
+		font-size: calc(1.5rem * 1.25);
+		color: var(--white-off2);
+	}
+	h4 {
+		font-size: 1.5rem;
+		color: var(--white-primary);
+	}
+	p,
+	span,
+	a {
+		font-size: 1rem;
+		color: var(--white-primary);
+	}
 </style>
