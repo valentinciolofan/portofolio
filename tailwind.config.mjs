@@ -11,11 +11,18 @@ export default {
 				'about-me': '#121212',
 				'light-dark': '#1E1E1F',
 			},
+			colors: {
+				'custom-gray': '#e7e1e1',
+			},
 			keyframes: {
 				fade: {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' },
 				},
+				fadeOut: {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' },
+				  },
 				'fade-border': {
 					'0%': { opacity: 1 },
 					'50%': { opacity: 0 },
@@ -47,6 +54,7 @@ export default {
 				'fadeInFromLeft': 'fadeInFromLeft 0.6s ease-out forwards', // New fade-in from left with no vertical movement
 				'fadeInFromRight': 'fadeInFromRight 0.6s ease-out forwards', // New fade-in from right with no vertical movement
 				fade: 'fade 0.5s ease-in-out',
+				fadeInModal: 'fade 0.2s ease-in-out',
 			}
 		}
 	},

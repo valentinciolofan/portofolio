@@ -22,24 +22,42 @@ console.log(projects);
         <div class="px-5 md:px-0 offer md:flex md:justify-between md:gap-16">
           <!--offer and CTA -->
           <div
-            class="left-side animate-slideInFromLeft flex flex-col justify-center items-center text-center md:items-start md:text-left"
+            class="left-side animate-slideInFromLeft flex flex-col justify-center items-center text-center md:items-start md:text-left space-y-6 md:space-y-8"
           >
             <span class="blur2"></span>
-            <h1 class="mb-4 text-5xl">Hi, I'm Valentin</h1>
-            <p class="mb-4 text-md">
-              A passionate Web Developer who transforms Ideas into Digital
-              Reality
+
+            <!-- Heading 1 -->
+            <h1
+              class="mb-4 md:mb-6 text-white text-5xl md:text-6xl font-extrabold"
+            >
+              Hi, I'm Valentin
+            </h1>
+
+            <!-- Subheading/Paragraph -->
+            <p class="mb-6 md:mb-8 text-gray-300 text-xl md:text-2xl">
+              A passionate <span class="text-xl md:text-2xl">Web Developer</span
+              > who transforms
+              <span class="text-xl md:text-2xl">Ideas</span> into <span
+                class="text-xl md:text-2xl">Digital Reality</span
+              >
             </p>
-            <h3 class="mb-3 text-base">
-              Tired of your old, slow, and outdated website?
+
+            <!-- Call to Action (H3) -->
+            <h3 class="mb-8 md:mb-10 text-lg md:text-xl text-gray-400">
+              Tired of your <span class="font-medium">old</span>, <span
+                class="font-medium">slow</span
+              >, and
+              <span class="font-medium">outdated website</span>?
             </h3>
-         
+
+            <!-- Call to Action Button -->
             <button
-              class="openContactModal btn-cta-homepage text-base bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white py-2 px-2 rounded-md transition duration-300 ease-in-out"
+              class="openContactModal btn-cta-homepage text-base bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white py-2 px-4 rounded-md transition duration-300 ease-in-out"
             >
               Request a website now!
             </button>
           </div>
+
           <!--end of offer and CTA -->
           <!--hero section photo -->
           <div
@@ -66,7 +84,7 @@ console.log(projects);
         class="container px-5 md:px-0 mx-20 md:mx-4 flex flex-col md:flex-row gap-7"
       >
         <div
-          class="contact-me h-fit md:sticky top-44 basis-1/6 flex flex-col sidebar rounded-2xl border border-solid border-zinc-700 p-6 shadow-2xl active bg-light-dark"
+          class="contact-me h-fit md:sticky top-48 basis-1/6 flex flex-col sidebar rounded-2xl border border-solid border-zinc-700 p-6 shadow-2xl active bg-light-dark"
           data-aos="fade-right"
           data-aos-duration="1000"
           data-aos-delay="200"
@@ -86,7 +104,7 @@ console.log(projects);
               <div class="flex flex-col gap-1">
                 <p>Valentin Ciolofan</p>
                 <p
-                  class="inline-block text-white text-xs bg-zinc-700 text-center rounded-lg py-0.5 px-3 sm:py-1.5 sm:px-4 xl:m-auto font-light"
+                  class="inline-block text-gray-200 text-xs bg-zinc-700 text-center rounded-lg py-0.5 px-3 sm:py-1.5 sm:px-4 xl:m-auto font-light"
                 >
                   Web Developer
                 </p>
@@ -101,13 +119,13 @@ console.log(projects);
             >
               <div class="flex gap-3">
                 <div
-                  class="self-center px-4 py-4 rounded-md shadow-inner bg-zinc-800"
+                  class="relative flex justify-center items-center w-12 h-12 bg-zinc-800 rounded-xl shadow-md shadow-black/20"
                 >
                   <svg
                     fill="none"
                     stroke="currentColor"
                     stroke-width="1.5"
-                    class="h-4 svgFilter"
+                    class="h-6 svgFilter text-zinc-500"
                     viewBox="0 0 24 24"
                     data-astro-cid-b4beqkka=""
                     astro-icon="envelope"
@@ -119,32 +137,32 @@ console.log(projects);
                   >
                 </div>
                 <div class="hidden min-[325px]:block">
-                  <p>Email</p>
-                  <p>valentincatalin02@gmail.com</p>
+                  <p class="text-zinc-500 text-sm uppercase">Email</p>
+                  <p class="text-gray-200">valentincatalin02@gmail.com</p>
                 </div>
               </div>
               <div class="flex gap-3 self-end">
-                <div
-                  class="self-center px-4 py-4 rounded-md shadow-inner bg-zinc-800"
-                >
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    class="h-4 text-light-slate"
-                    viewBox="0 0 24 24"
-                    data-astro-cid-b4beqkka=""
-                    astro-icon="phone"
-                    ><path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-                    ></path></svg
-                  >
+                <div class="relative flex justify-center items-center w-12 h-12 bg-zinc-800 rounded-xl shadow-md shadow-black/20">
+                  <div class="relative z-10">
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="h-6 w-6 text-zinc-500"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                      />
+                    </svg>
+                  </div>
                 </div>
+                
                 <div class="hidden min-[325px]:block">
-                  <p>Phone</p>
-                  <p>+40752807961</p>
+                  <p class="text-zinc-500 text-sm uppercase">Phone</p>
+                  <p class="text-gray-200">+40752807961</p>
                 </div>
               </div>
             </div>
@@ -166,24 +184,22 @@ console.log(projects);
         >
           <!-- about me section menu -->
           <div
-            class="fixed bottom-0 left-0 w-full z-40 bg-gray-300 bg-opacity-70 backdrop-blur-md text-light-gray border border-solid
- border-slate rounded-tl-xl rounded-tr-xl sm:rounded-tl lg:absolute lg:bottom-auto lg:top-0 lg:left-auto lg:right-0
-  lg:w-max sm:rounded-tr lg:rounded-bl-3xl lg:rounded-tl-none lg:px-5"
+            class="absolute top-0 right-0 px-5 border border-zinc-700 border-solid border-t-0 border-r-0 rounded-tl-none rounded-tr-none rounded-bl-3xl"
           >
             <ul
-              class="flex flex-wrap justify-center px-2.5 sm:gap-5 lg:gap-7 lg:px-5"
+              class="flex flex-wrap justify-center px-2.5 sm:gap-5 lg:gap-7"
             >
               <li class="list-none">
                 <button
                   id="btnAbout"
-                  class="py-5 px-1.5 text-light-gray text-xs sm:text-sm md:text-base md:font-medium hover:text-light transition ease-in-out duration-200"
+                  class="py-5 px-1.5 text-custom-gray text-xs sm:text-sm md:text-base md:font-medium hover:text-light transition ease-in-out duration-200"
                   >About</button
                 >
               </li>
               <li class="list-none">
                 <button
                   id="btnPortfolio"
-                  class="py-5 px-1.5 text-light-gray text-xs sm:text-sm md:text-base md:font-medium hover:text-light transition ease-in-out duration-200"
+                  class="py-5 px-1.5 text-custom-gray text-xs sm:text-sm md:text-base md:font-medium hover:text-light transition ease-in-out duration-200"
                   >Portfolio</button
                 >
               </li>
@@ -192,7 +208,7 @@ console.log(projects);
           <!-- end of about me menu -->
           <div id="aboutMeInfo" class="visible">
             <div class="flex flex-col gap-2">
-              <h2>About me</h2>
+              <h2 class="text-3xl font-bold">About</h2>
 
               <p class="hyphens-auto pb-4">
                 Hey there, I'm Valentin, a passionate Web Developer with a
@@ -215,18 +231,18 @@ console.log(projects);
               <!--Services -->
               <div>
                 <div>
-                  <h1 class="pb-4">Services</h1>
+                  <h2 class="pb-4 text-3xl font-bold">Services</h2>
                 </div>
                 <!--card services -->
                 <div
-                  class="*:bg-zinc-800 grid grid-cols-1 gap-3 lg:grid-cols-2 *:items-center"
+                  class="*:bg-zinc-800 grid grid-cols-1 gap-4 *:gap-2 *:py-8 lg:grid-cols-2 *:items-center *:flex *:px-5 *:rounded-xl *:shadow-xl"
                 >
-                  <div class="card card-side shadow-xl md:p-0">
-                    <div class="p-2">
+                  <div class="card card-side">
+                    <div class="">
                       <svg
                         fill="none"
                         viewBox="0 0 42 42"
-                        class="h-10 svgFilter"
+                        class="w-10 h-10 svgFilter text-zinc-500"
                         astro-icon="icon-webdesign"
                         ><path
                           fill="url(#astroicon:icon-webdesigna)"
@@ -298,9 +314,9 @@ console.log(projects);
                         ></svg
                       >
                     </div>
-                    <div class="card-body">
-                      <h2 class="card-title">Static Websites</h2>
-                      <p>
+                    <div class="card-body flex flex-col gap-2">
+                      <h2 class="card-title text-2xl font-semibold">Static Websites</h2>
+                      <p class="text-gray-200 text-base">
                         Allowing clients to tailor the template to their brand
                         identity.
                       </p>
@@ -308,11 +324,11 @@ console.log(projects);
                   </div>
 
                   <div class="card card-side shadow-xl">
-                    <div class="p-2">
+                    <div class="">
                       <svg
                         fill="none"
                         viewBox="0 0 22 40"
-                        class="w-10 h-10 svgFilter"
+                        class="w-10 h-10 svgFilter text-zinc-500"
                         astro-icon="icon-phone"
                         ><path
                           fill="url(#astroicon:icon-phonea)"
@@ -347,18 +363,19 @@ console.log(projects);
                         ></svg
                       >
                     </div>
-                    <div class="card-body">
-                      <h2 class="card-title">Responsive Design</h2>
-                      <p>Layouts that will work on any device, big or small.</p>
+                    <div class="card-body flex flex-col gap-2">
+                      <h2 class="card-title text-2xl font-semibold">Responsive Design</h2>
+                      <p class="text-gray-200 text-base">Layouts that will work on any device, big or small.</p>
                     </div>
                   </div>
 
                   <div class="card card-side shadow-xl">
-                    <div class="p-2">
+                    <div class="">
                       <svg
                         width="40px"
                         height="40px"
                         viewBox="0 0 30 30"
+                        class="w-10 h-10 text-zinc-500"
                         version="1.1"
                         id="svg822"
                         fill="#ffffff"
@@ -415,19 +432,19 @@ console.log(projects);
                         </g></svg
                       >
                     </div>
-                    <div class="card-body">
-                      <h2 class="card-title">Fast</h2>
-                      <p>Fast load times and lag free interaction.</p>
+                    <div class="card-body flex flex-col gap-2">
+                      <h2 class="card-title text-2xl font-semibold">Fast</h2>
+                      <p class="text-gray-200 text-base">Fast load times and lag free interaction.</p>
                     </div>
                   </div>
 
                   <div class="card card-side shadow-xl">
-                    <div class="p-2">
+                    <div class="">
                       <svg
                         width="40px"
                         height="40px"
                         viewBox="0 0 1024 1024"
-                        class="icon"
+                        class="icon w-10 h-10 text-zinc-500"
                         version="1.1"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="#ffffff"
@@ -456,9 +473,9 @@ console.log(projects);
                         ></svg
                       >
                     </div>
-                    <div class="card-body">
-                      <h2 class="card-title">Intuitive</h2>
-                      <p>Easy to use and intuitive UX/UI.</p>
+                    <div class="card-body flex flex-col gap-2">
+                      <h2 class="card-title text-2xl font-semibold">Intuitive</h2>
+                      <p class="text-gray-200 text-base">Easy to use and intuitive UX/UI.</p>
                     </div>
                   </div>
                 </div>
@@ -468,7 +485,7 @@ console.log(projects);
             </div>
             <!--STACK -->
             <div class="my-10">
-              <h2>Stack</h2>
+              <h2 class="text-3xl font-bold">Stack</h2>
               <div class="mt-4 flex flex-wrap gap-3">
                 <svg
                   width="60px"
@@ -579,7 +596,7 @@ console.log(projects);
             data-aos-delay="200"
             data-aos-once="true"
           >
-            <h1>Portfolio bro</h1>
+            <h2 class="text-3xl font-bold">Portfolio</h2>
 
             <div class="mt-3 sm:mt-5">
               <div
@@ -608,10 +625,10 @@ console.log(projects);
                         title={object.data.title}
                         description={object.data.description}
                       />
-                      <h3 class="ms-2 text-md text-white">
+                      <h3 class="ms-2 text-base text-white">
                         {object.data.title}
                       </h3>
-                      <p class="ms-2 text-md text-light-gray">
+                      <p class="ms-2 text-base text-gray-400">
                         {object.data.category}
                       </p>
                     </figure>
@@ -674,7 +691,6 @@ console.log(projects);
 
   <script type="module">
     document.addEventListener("DOMContentLoaded", () => {
-      // Use optional chaining to safely access the elements
       const openModalButtons = document.querySelectorAll(".openContactModal");
       const contactModal = document.getElementById("contactModal")?.classList;
       const closeModalButton = document.getElementById("closeContactModal");
@@ -683,11 +699,13 @@ console.log(projects);
         openModalButtons.forEach((button) => {
           button.addEventListener("click", () => {
             contactModal.remove("hidden");
+            contactModal.add('animate-fadeInModal');
           });
         });
 
         closeModalButton.addEventListener("click", () => {
           contactModal.add("hidden");
+          contactModal.remove('animate-fadeInModal');
         });
       } else {
         console.warn("Required elements for modal functionality not found.");
@@ -695,14 +713,14 @@ console.log(projects);
     });
 
     // handle contact form submit data
-    // const submitFormData = (e) => {
-    //   e.preventDefault();
+    const submitFormData = (e) => {
+      e.preventDefault();
 
-    //   const formData = new FormData(e.target);
+      const formData = new FormData(e.target);
 
-    //   console.log(Object.fromEntries(formData));
-    // };
-    // document.querySelector('#contactForm').addEventListener('submit', submitFormData);
+      console.log(Object.fromEntries(formData));
+    };
+    document.querySelector('#contactForm').addEventListener('submit', submitFormData);
 
     // script for about me section
     const btnAbout = document.getElementById("btnAbout");
