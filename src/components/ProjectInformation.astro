@@ -5,10 +5,10 @@ const { id, gif, title, description } = Astro.props;
 const gifAlt = `${title} GIF`;
 const closeId = `${id}Close`;
 ---
-<div id={id} class="absolute top-0 left-0 w-full h-full hidden bg-black bg-opacity-75 z-50 items-center justify-center">
-    <div class="relative m-3.5 p-6 sm:p-10 bg-black rounded border border-solid border-slate max-w-lg sm:max-w-xl md:max-w-2xl">
-    <span id={closeId} class="absolute top-3.5 right-3.5 cursor-pointer bg-onyx p-2 rounded-lg closeModal">
-        <Icon name=close class="h-4 text-white" />
+<div id={id} class="fixed top-0 left-0 w-full h-full hidden bg-light-dark bg-opacity-75 z-50 items-center justify-center">
+    <div class="relative m-3.5 p-6 sm:p-10 bg-light-dark rounded-2xl border border-solid border-zinc-700 max-w-lg sm:max-w-xl md:max-w-2xl">
+    <span id={closeId} class="absolute top-3.5 right-3.5 cursor-pointer bg-zinc-800 rounded-xl shadow-md shadow-black/20 p-2 closeModal">
+        <Icon name="close" class="h-4 text-gray-400 hover:text-gray-200" />
     </span>
     {gif && (
       <Image
@@ -17,8 +17,8 @@ const closeId = `${id}Close`;
         class="w-full max-w-sm sm:max-w-full h-52 xs:h-auto mb-4 rounded-xl object-cover sm:mt-3"
       />
     )}
-    <h3 class="ms-2 mb-1 text-xl font-bold text-white">{title}</h3>
-    <p class="ms-2 text-md text-light-gray-90 leading-relaxed font-light text-base">{description}</p>
+    <h3 class="ms-2 mb-1 text-xl font-bold text-zinc-300">{title}</h3>
+    <p class="ms-2 text-md text-gray-300 leading-relaxed font-light text-base">{description}</p>
   </div>
 </div>
 
@@ -30,7 +30,6 @@ const closeId = `${id}Close`;
         const closeModalBtns = document.querySelectorAll('.closeModal');
         const modals = Array.from({ length: openModalBtns.length }, (_, index) => document.getElementById(`modal${index}`));
         // Function to open the modal
-        console.log(modals);
         function openModal(index: number) {
             const modal = modals[index];
             if (modal) {

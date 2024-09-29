@@ -1,7 +1,7 @@
-<header id="header" class="z-40 fixed top-0 w-full mx-auto md:flex md:justify-between py-8">
-  <div class="px-5 md:px-0 container mx-auto md:flex md:justify-between items-baseline">
+<header id="header" class="z-50 fixed top-0 w-full mx-auto md:flex md:justify-between py-8">
+  <div class="px-5 md:px-0 container mx-auto md:flex md:justify-between items-baseline hover:*:text-white">
     <div class="flex justify-between w-full">
-      <a href=".." class="font-bold text-xl">Valentin Ciolofan</a>
+      <a href=".." class="text-gray-200 hover:text-white font-bold text-xl">Valentin Ciolofan</a>
       <button id="hamburger" class="md:hidden self-end">
         <i class="fa fa-bars ml-auto"></i>
       </button>
@@ -10,8 +10,8 @@
       id="navbar"
       class="hidden md:flex flex-col md:flex-row gap-4 md:gap-12 items-center text-center pt-8 md:pt-0"
     >
-      <a href="..">Home</a>
-      <a href="#aboutme" class="whitespace-nowrap">About me</a>
+      <a href=".." class="text-gray-200 hover:text-white">Home</a>
+      <a href="#aboutme" class="text-gray-200 hover:text-white whitespace-nowrap">About me</a>
       <button
         class="basis-full whitespace-nowrap hireme openContactModal mx-auto fade-border-button self-center px-8 py-4 border border-solid rounded-lg hover:bg-neutral-600 hover:text-white"
       >
@@ -70,12 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
  /* Global link and button styles */
 a,
 .hireme {
-  color: #e7e1e1;
   font-size: 16px;
-}
-
-a:hover {
-  color: #ffffff;
 }
 
 /* Fixed header styles */
