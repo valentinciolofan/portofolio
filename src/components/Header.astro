@@ -1,9 +1,64 @@
-<header id="header" class="z-50 fixed top-0 w-full mx-auto md:flex md:justify-between py-8">
-  <div class="px-5 md:px-0 container mx-auto md:flex md:justify-between items-baseline hover:*:text-white">
-    <div class="flex slideInFromLeft md:animate-slideInFromLeft justify-between items-center w-full">
-      <a href=".." class="text-gray-200 hover:text-white font-bold text-xl">Valentin Ciolofan</a>
-      <button id="hamburger" class="md:hidden self-end text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="white" d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"/></g></svg>
+<header
+  id="header"
+  class="z-50 fixed top-0 w-full mx-auto md:flex md:justify-between py-8"
+>
+  <div
+    class="px-5 md:px-0 container mx-auto md:flex md:justify-between items-baseline hover:*:text-white"
+  >
+    <div
+      class="flex slideInFromLeft md:animate-slideInFromLeft justify-between items-center w-full"
+    >
+      <a href=".." class="group flex items-center gap-2 hover:text-white">
+        <!-- Adding animated text between angled brackets -->
+        <span
+          class="text-indigo-500 text-3xl font-extrabold group-hover:text-purple-500 transform transition-transform duration-300 group-hover:-translate-y-1"
+        >
+          &lt;/
+        </span>
+
+        <!-- Text with gradient, consistent with your provided style -->
+        <span
+          class="text-4xl font-extrabold italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 group-hover:from-indigo-600 group-hover:to-purple-600 transform transition-transform duration-300 group-hover:skew-y-3"
+        >
+          V
+        </span>
+
+        <span
+          class="text-xl font-semibold text-gray-200 -ml-1.5 group-hover:text-blue-400 transform transition-transform duration-300 group-hover:translate-x-2"
+        >
+          alentin
+        </span>
+
+        <!-- Adding animated text between angled brackets -->
+        <span
+          class="text-indigo-500 text-3xl font-extrabold group-hover:text-purple-500 transform transition-transform duration-300 group-hover:translate-y-1"
+        >
+          &gt;
+        </span>
+
+        <!-- Adding a bouncing dot for uniqueness -->
+        <span
+          class="text-2xl text-yellow-400 group-hover:text-red-500 animate-bounce"
+        >
+          .
+        </span>
+      </a>
+
+      <button id="hamburger" class="md:hidden self-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1.5em"
+          height="1.5em"
+          viewBox="0 0 24 24"
+          ><g fill="none"
+            ><path
+              d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+            ></path><path
+              fill="white"
+              d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"
+            ></path></g
+          ></svg
+        >
       </button>
     </div>
     <div
@@ -11,7 +66,10 @@
       class="hidden slideInFromRight md:animate-slideInFromRight md:flex flex-col md:flex-row gap-4 md:gap-12 items-center text-center pt-8 md:pt-0"
     >
       <a href=".." class="text-gray-200 hover:text-white">Home</a>
-      <a href="#aboutme" class="text-gray-200 hover:text-white whitespace-nowrap">About me</a>
+      <a
+        href="#aboutme"
+        class="text-gray-200 hover:text-white whitespace-nowrap">About me</a
+      >
       <button
         class="basis-full whitespace-nowrap hireme openContactModal mx-auto fade-border-button self-center px-8 py-4 border border-solid rounded-lg hover:bg-neutral-600 hover:text-white"
       >
@@ -21,120 +79,133 @@
   </div>
 </header>
 
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.getElementById('header');
-  const hamburger = document.getElementById("hamburger");
-  const navBar = document.getElementById("navbar");
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    const hamburger = document.getElementById("hamburger");
+    const navBar = document.getElementById("navbar");
 
-  // Function to add/remove 'scrolled' class based on scroll position
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled'); // Add class when scrolling down
-    } else {
-      header.classList.remove('scrolled'); // Remove class when scrolled back up
-    }
-  };
-
-  // Hamburger menu toggle functionality
-  const toggleNavBar = (event) => {
-    event.preventDefault(); // Prevent default behavior of <a> tag
-    if (navBar.style.display === "flex") {
-      navBar.style.display = "none";
-      navBar.classList.remove('open'); // Remove 'open' class when closed
-
-      // Remove background color/blur if user is at top of page and menu is closed
-      if (window.scrollY < 50) {
-        header.classList.remove('bg-active'); 
+    // Function to add/remove 'scrolled' class based on scroll position
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled"); // Add class when scrolling down
+      } else {
+        header.classList.remove("scrolled"); // Remove class when scrolled back up
       }
-    } else {
-      navBar.style.display = "flex";
-      navBar.classList.add('open'); // Add 'open' class when opened
-      header.classList.add('bg-active'); // Add background color/blur on menu open
+    };
+
+    // Hamburger menu toggle functionality
+    const toggleNavBar = (event) => {
+      event.preventDefault(); // Prevent default behavior of <a> tag
+      if (navBar.style.display === "flex") {
+        navBar.style.display = "none";
+        navBar.classList.remove("open"); // Remove 'open' class when closed
+
+        // Remove background color/blur if user is at top of page and menu is closed
+        if (window.scrollY < 50) {
+          header.classList.remove("bg-active");
+        }
+      } else {
+        navBar.style.display = "flex";
+        navBar.classList.add("open"); // Add 'open' class when opened
+        header.classList.add("bg-active"); // Add background color/blur on menu open
+      }
+    };
+
+    // Listen to scroll event
+    window.addEventListener("scroll", handleScroll);
+
+    // Attach hamburger click event
+    if (hamburger) {
+      hamburger.addEventListener("click", toggleNavBar);
     }
-  };
-
-  // Listen to scroll event
-  window.addEventListener('scroll', handleScroll);
-
-  // Attach hamburger click event
-  if (hamburger) {
-    hamburger.addEventListener("click", toggleNavBar);
-  } 
-});
-
+  });
 </script>
 
 <style>
- /* Global link and button styles */
- a,
-.hireme {
-  font-size: 16px;
-}
-
-/* Fixed header styles */
-/* Fixed header styles */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: transparent; /* Transparent initially */
-  transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s, backdrop-filter 0.3s;
-  padding: 20px 0; /* Initial padding */
-}
-
-/* Scrolled class: Shrinks header and adds background and blur when scrolling */
-#header.scrolled {
-  background-color: hsl(240, 2%, 16%, 0.9); /* Dark background with 90% opacity */
-  backdrop-filter: blur(10px); /* Apply blur */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  padding: 10px 0; /* Shrink header padding */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on scroll */
-}
-
-/* bg-active class: Only applies background color and blur, no height change */
-#header.bg-active {
-  background-color: hsl(240, 2%, 16%, 0.9); /* Dark background with 90% opacity */
-  backdrop-filter: blur(10px); /* Apply blur */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-/* When the navbar is open */
-#navbar.open {
-  display: block;
-}
-
-
-.fade-border-button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border: 2px solid rgba(0, 201, 255, 0); /* Invisible border at start */
-  border-radius: 0.375rem;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s, color 0.3s;
-  animation: fade-border 2s infinite;
-}
-
-.fade-border-button:hover {
-  background: linear-gradient(to right, #6366f1, #a855f7);
-}
-
-@keyframes fade-border {
-  0% {
-    border-color: rgba(0, 201, 255, 0);
+  /* Global link and button styles */
+  a,
+  .hireme {
+    font-size: 16px;
   }
-  50% {
-    border-color: rgb(114, 1, 252);
+
+  /* Fixed header styles */
+  /* Fixed header styles */
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent; /* Transparent initially */
+    transition:
+      background-color 0.3s,
+      padding 0.3s,
+      box-shadow 0.3s,
+      backdrop-filter 0.3s;
+    padding: 20px 0; /* Initial padding */
   }
-  100% {
-    border-color: rgba(0, 201, 255, 0);
+
+  /* Scrolled class: Shrinks header and adds background and blur when scrolling */
+  #header.scrolled {
+    background-color: hsl(
+      240,
+      2%,
+      16%,
+      0.9
+    ); /* Dark background with 90% opacity */
+    backdrop-filter: blur(10px); /* Apply blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 10px 0; /* Shrink header padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on scroll */
   }
-}
+
+  /* bg-active class: Only applies background color and blur, no height change */
+  #header.bg-active {
+    background-color: hsl(
+      240,
+      2%,
+      16%,
+      0.9
+    ); /* Dark background with 90% opacity */
+    backdrop-filter: blur(10px); /* Apply blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+
+  /* When the navbar is open */
+  #navbar.open {
+    display: block;
+  }
+
+  .fade-border-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid rgba(0, 201, 255, 0); /* Invisible border at start */
+    border-radius: 0.375rem;
+    cursor: pointer;
+    outline: none;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+    animation: fade-border 2s infinite;
+  }
+
+  .fade-border-button:hover {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+  }
+
+  @keyframes fade-border {
+    0% {
+      border-color: rgba(0, 201, 255, 0);
+    }
+    50% {
+      border-color: rgb(114, 1, 252);
+    }
+    100% {
+      border-color: rgba(0, 201, 255, 0);
+    }
+  }
 </style>
